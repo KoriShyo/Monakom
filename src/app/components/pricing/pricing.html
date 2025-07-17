@@ -1,0 +1,314 @@
+<!--
+  Angular component templates should not include <html>, <head>, or <body> tags.
+  Remove duplicate/invalid closing tags and keep only the template content.
+-->
+<div class="pricing-page-bg">
+    <div id="Pricing" class="container">
+        <div class="header">
+            <h1>Find the right plan for you</h1>
+            <p>Choose the perfect package of software and hardware to meet your business's needs.</p>
+           
+        </div>
+        <div class="pricing-grid">
+            <!-- Starter Kit -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h2 class="card-title">LITE</h2>
+                    <p class="card-description">
+                        Entry level POS for small <br>businesses
+                    </p>
+                </div>
+                
+                <div class="card-content">
+                    <div class="price-section">
+                        <div class="starting-text">One Time</div>
+                        <div class="price">
+                            <span>Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="button-wrapper">
+                        <a href="#demo">
+                            <button class="cta-buttonn btn-primary pulse" onclick="handleShopNow()">
+                                CONTACT US
+                            </button>
+                        </a>
+                    </div>
+                    <div class="pos-cloud-note">
+                        POS Cloud Service : $20/month<br>
+                        <span class="pos-cloud-annual">$190/year (Save $50)</span>
+                    </div>
+
+                    <div class="features-section">
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Hardware kit with no upfront costs.*</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Menu Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Transactions Management (Online & Offline Mode)</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Inventory Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Loyalty Program (Basic & Local)</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Reports & Analysis</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Security & Role Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Settings Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">POS Cloud Service</span>
+                            </li>
+                        </ul>
+
+                        <a href="#" class="view-features" onclick="toggleFeatures(this)">
+                            View all features →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Point of Sale -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h2 class="card-title">STANDARD</h2>
+                    <p class="card-description">
+                        Full-featured POS for growing businesses
+                    </p>
+                </div>
+
+                <div class="card-content">
+                    <div class="price-section">
+                        <div class="starting-text">One Time</div>
+                        <div class="price">
+                            <span>$199</span>
+                        </div>
+                    </div>
+
+                    <div class="button-wrapper">
+                        <a href="#demo">
+                            <button class="cta-buttonn btn-primary pulse" onclick="handleShopNow()">
+                                CONTACT US
+                            </button>
+                        </a>
+                    </div>
+                    
+                    <div class="pos-cloud-note">
+                        POS Cloud Service : $20/month<br>
+                        <span class="pos-cloud-annual">$190/year (Save $50)</span>
+                    </div>
+
+                    <div class="features-section">
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Advanced Menu Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Advanced Transactions Management (Online & Offline Mode)</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Advanced Inventory Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Advanced Loyalty Program (Basic & Local)</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Advanced Reports & Analysis</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Advanced Security & Role Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Advanced Settings Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Advanced POS Cloud Service</span>
+                            </li>
+                        </ul>
+
+                        <a href="#" class="view-features" onclick="toggleFeatures(this)">
+                            View all features →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Build Your Own -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h2 class="card-title">ENTERPRISE</h2>
+                    <p class="card-description">
+                        Multi-location support, advance integrations
+                    </p>
+                </div>
+
+                <div class="card-content">
+                    <div class="price-section">
+                        <div class="starting-text">One Time</div>
+                        <div class="price">
+                            <span>$399</span>
+                        </div>
+                    </div>
+
+                    <div class="button-wrapper">
+                        <a href="#demo">
+                            <button class="cta-buttonn btn-primary pulse" onclick="handleShopNow()">
+                                CONTACT US
+                            </button>
+                        </a>
+                    </div>
+                    <div class="pos-cloud-note">
+                        POS Cloud Service : $20/month<br>
+                        <span class="pos-cloud-annual">$190/year (Save $50)</span>
+                    </div>
+
+                    <div class="features-section">
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Premium Menu Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Premium Transactions Management (Online & Offline Mode)</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Premium Inventory Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Premium Loyalty Program (Basic & Local)</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Premium Reports & Analysis</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Premium Security & Role Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Premium Settings Management</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon icon-check">✓</div>
+                                <span class="feature-text">Premium POS Cloud Service</span>
+                            </li>
+                        </ul>
+                        <a href="all_feture.html" class="view-features" onclick="toggleFeatures(this)">
+                            View all features →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="promo-container">
+        <div class="floating-elements">
+            <div class="floating-dot"></div>
+            <div class="floating-dot"></div>
+            <div class="floating-dot"></div>
+        </div>
+         -->
+        <!-- <div style="text-align: center; margin-bottom: 40px;">
+            <div class="badge">Monakom License Options</div>
+            <h1 class="white-title">Simple, Transparent Licensing for Your Restaurant</h1>
+            <p class="white-desc">Choose the Monakom license that fits your business best. Enjoy the flexibility of an annual subscription or a one-time lifetime license—no hidden fees, just powerful POS solutions.</p>
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="left-content">
+                <h2 class="plan-title">1 Year Plan</h2>
+                
+                <div class="pricing">
+                    <div class="current-price">$180<span style="font-size: 18px; font-weight: 400;">/year</span></div>
+                    <div class="price-details">Cloud included</div>
+                </div>
+                
+                <ul class="features-list">
+                    <li>
+                        <div class="checkmark"></div>
+                        <span>Full POS system access</span>
+                    </li>
+                    <li>
+                        <div class="checkmark"></div>
+                        <span>Cloud storage & sync</span>
+                    </li>
+                    <li>
+                        <div class="checkmark"></div>
+                        <span>Annual billing discount</span>
+                    </li>
+                    <li>
+                        <div class="checkmark"></div>
+                        <span>Priority support</span>
+                    </li>
+                </ul>
+                <a href="#demo">
+                    <button class="cta-button">Contact Monakom</button>
+                </a>
+               
+            </div>
+            
+            <div class="right-content">
+                <h2 class="plan-title">One-Time Purchase</h2>
+                
+                <div class="pricing">
+                    <div class="current-price">$399<span style="font-size: 18px; font-weight: 400;"> once</span></div>
+                    <div class="price-details">Lifetime license</div>
+                </div>
+                
+                <ul class="features-list">
+                    <li>
+                        <div class="checkmark"></div>
+                        <span>Complete POS system</span>
+                    </li>
+                    <li>
+                        <div class="checkmark"></div>
+                        <span>No recurring fees</span>
+                    </li>
+                    <li>
+                        <div class="checkmark"></div>
+                        <span>Local data storage</span>
+                    </li>
+                    <li>
+                        <div class="checkmark"></div>
+                        <span>Standard support included</span>
+                    </li>
+                </ul>
+                <a href="#demo">
+                    <button class="cta-button">Contact Monakom</button>
+                </a>
+                
+            </div>
+        </div> -->
+        
+        <!-- <div class="product-showcase"></div>
+    </div> -->
+</div>

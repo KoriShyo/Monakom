@@ -1,0 +1,84 @@
+.trusted-by-section {
+    color: #333; /* Darker text color for contrast */
+    padding: 80px 0; /* Adjust padding as needed */
+    text-align: center;
+  }
+
+  .trusted-by-section .container {
+    max-width: 1000px; /* Max width for content, adjust as needed */
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .trusted-by-section .description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 50px auto; /* Add margin below description */
+  }
+  
+  .trusted-by-section .meet-customers {
+    color: #007bff; /* A nice blue for the link */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .trusted-by-section .meet-customers:hover {
+    text-decoration: underline;
+  }
+  
+  .trusted-by-section .company-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between rows of logos */
+  }
+
+  .trusted-by-section .company-logos .logo {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .trusted-by-section .company-logos .logo:hover {
+    transform: scale(1.5); /* Makes logo 10% bigger on hover */
+  }
+  .trusted-by-section .logo-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+    gap: 30px; /* Space between individual logos */
+  }
+  
+  .trusted-by-section .logo {
+    font-size: 28px; /* Adjust logo font size */
+    font-weight: bold;
+    max-width: 180px;
+    height: auto;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .trusted-by-section .description {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  
+    .trusted-by-section .logo {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .trusted-by-section {
+      padding: 50px 0;
+    }
+  
+    .trusted-by-section .logo-row {
+      justify-content: center; /* Center logos on very small screens */
+      gap: 20px; /* Reduce gap for smaller screens */
+    }
+  
+    .trusted-by-section .logo {
+      font-size: 20px;
+      max-width: 120px; /* Reduce max-width for smaller screens */
+      flex: 0 0 calc(50% - 10px); /* Force 2 logos per row on small screens */
+    }
+  }

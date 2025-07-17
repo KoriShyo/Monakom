@@ -1,0 +1,733 @@
+:root {
+--primary-color: #2A4992;
+--secondary-color: #2A4992;
+--dark-color: #1e3670;
+--light-bg: rgba(42, 73, 146, 0.05);
+--text-light: #ffffff;
+--text-dark: #333333;
+--text-muted: #555555;
+--text-muted-light: #cccccc;
+--border-light: #eeeeee;
+--body-bg: #f8f9fa;
+--card-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+--card-shadow-hover: 0px 15px 35px rgba(0, 0, 0, 0.12);
+--button-shadow: 0 4px 10px rgba(42, 73, 146, 0.3);
+--button-shadow-hover: 0 6px 15px rgba(42, 73, 146, 0.4);
+ 
+--font-size-base: 1rem;
+--line-height-base: 1.6;
+--border-radius: 15px;
+--border-radius-sm: 10px;
+--border-radius-lg: 50px;
+  }
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+}
+/*
+ When the `isHidden` property in the component is true, Angular
+ applies the `.navbar--hidden` class to the host element.
+ This rule then moves the navbar out of the viewport.
+*/
+:host(.navbar--hidden) {
+  top: -100px; /* Adjust this value to match your navbar's height */
+}
+
+  .header {
+background: white;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+width: 100%;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    height: 56px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (max-width: 768px) {
+.header-container {
+display: none;
+}
+  }
+  
+  .mobile-header {
+display: none;
+  }
+  @media (max-width: 768px) {
+.mobile-header {
+display: block;
+background: white;
+border-bottom: 1px solid #e5e7eb;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+width: 100%;
+height: 56px;
+min-height: 56px;
+}
+  }
+  
+  .mobile-container {
+display: flex;
+align-items: center;
+justify-content: space-between; /* MODIFIED: Changed to space-between for better alignment */
+padding: 0 1rem;
+height: 56px;
+min-height: 56px;
+padding-top: 0;
+padding-bottom: 0;
+  }
+  
+  .logo {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.1rem;
+  }
+  
+  .logo-texts {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-left: 0.2rem;
+margin-top: 0.1rem;
+  }
+  
+  .monakom-text {
+color: #e53935;
+font-weight: 700;
+font-size: 1.7rem;
+letter-spacing: 0.02em;
+line-height: 1;
+font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  
+  .technology-text {
+color: #2A4992;
+font-size: 1.05rem;
+font-weight: 600;
+letter-spacing: 0.25em;
+margin-top: 0.1rem;
+line-height: 1;
+font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  
+  .logo img {
+height: 40px;
+width: auto;
+object-fit: contain;
+  }
+  
+  @media (max-width: 768px) {
+/* MODIFIED: Increased logo image size for better visibility on mobile */
+.logo img {
+height: 56px;
+}
+  }
+  
+  @media (max-width: 480px) {
+/* MODIFIED: Adjusted logo size for smaller mobile screens */
+.logo img {
+height: 44px;
+}
+  }
+  
+/* MODERN NAVIGATION STYLING */
+.desktop-nav {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif; /* Use your own font here */
+}
+
+/* Remove default link styles */
+.nav-item a {
+  text-decoration: none;
+}
+
+/* NAVIGATION BUTTON STYLING */
+.nav-button {
+  /* Font and Appearance */
+  font-size: 15px;
+  font-weight: 550;
+  color: #333;
+  /* Spacing and Alignment */
+  padding: 15px 15px;
+  margin: 0 10px;
+  
+  /* Underline Setup */
+  position: relative; /* Required for the pseudo-element */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* THE ANIMATED UNDERLINE */
+.nav-button::after {
+  content: ''; /* Create the pseudo-element */
+  position: absolute;
+  bottom: 5px; /* Position the underline below the text */
+  left: 50%; /* Start the line in the middle */
+  transform: translateX(-50%); /* Center the line perfectly */
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the underline */
+  background-color: #2A4992; /* Underline color - change as needed */
+
+  /* The smooth transition effect! */
+  transition: width 0.4s ease-in-out;
+}
+
+/* ANIMATION ON HOVER */
+.nav-button:hover::after {
+  width: 100%; /* Expand the underline to full width on hover */
+}
+
+/* STYLE FOR THE ACTIVE BUTTON */
+.nav-button.active {
+  color: #2A4992; /* Optionally change text color for active link */
+}
+
+.nav-button.active::after {
+  width: 100%; /* Keep the underline at full width for the active button */
+}
+  
+  @media (max-width: 768px) {
+.desktop-nav {
+display: none;
+}
+  }
+  
+  .dropdown-icon {
+transition: transform 0.2s;
+color: #6b7280;
+  }
+  
+  .dropdown:hover .dropdown-icon {
+transform: rotate(180deg);
+  }
+  
+  .desktop-actions {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+.desktop-actions {
+display: none;
+}
+  }
+  
+  .desktop-actions a {
+color: black;
+  }
+  
+  .desktop-actions button:hover {
+  background-color: #152e68;
+  color: white;
+  }
+  
+  .location-selector {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.2s;
+  }
+  
+  .location-selector:hover {
+background-color: #f3f4f6;
+  }
+  
+  .location-text {
+font-size: 0.9rem;
+color: var(--primary-color);
+font-weight: 500;
+  }
+  
+  .login-button {
+background: none;
+border: none;
+padding: 0.5rem 1rem;
+font-size: 0.95rem;
+font-weight: 500;
+color: var(--primary-color);
+cursor: pointer;
+border-radius: 6px;
+border: 1.5px solid #2A4992;
+transition: background-color 0.2s;
+margin-left: 0;
+margin-right: 8px;
+position: relative;
+height: 40px;
+min-width: 90px;
+box-sizing: border-box;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+  }
+  
+  .login-button:hover {
+background-color: #f3f4f6;
+  }
+ 
+  .demo-button {
+background: #2A4992;
+color: rgb(255, 255, 255);
+border: 1.5px solid #2A4992;
+font-size: 0.85rem;
+font-weight: 600;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.2s;
+height: 40px;
+min-width: 140px;
+width: 140px;
+padding: 0.5rem 1rem;
+box-sizing: border-box;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin: 0 8px 0 0;
+white-space: nowrap;
+  }
+  
+  .demo-button:hover {
+background: #1e3670;
+border-color: #1e3670;
+  }
+  
+  .mobile-menu-btn {
+display: none;
+background: none;
+border: none;
+padding: 0.5rem;
+cursor: pointer;
+color: #374151;
+  }
+  
+  @media (max-width: 768px) {
+.mobile-menu-btn {
+display: flex; /* MODIFIED: Use flex for centering SVG */
+      align-items: center;
+      justify-content: center;
+}
+  }
+  
+  .mobile-actions {
+display: flex;
+align-items: center;
+gap: 1rem;
+  }
+  
+  .mobile-actions a {
+color: black;
+  }
+  
+  .mobile-actions button:hover {
+background-color: #1e3670;
+color: white;
+  }
+  
+  @media (min-width: 769px) {
+.mobile-actions {
+display: none;
+}
+  }
+ 
+  /* --- MODIFIED: Styles for mobile buttons and burger menu --- */
+  @media (max-width: 768px) {
+.mobile-actions {
+display: flex !important;
+flex-direction: row !important;
+align-items: center !important;
+justify-content: flex-end !important;
+gap: 0.75rem !important; /* Increased gap for larger elements */
+width: auto;
+margin: 0;
+padding: 0;
+}
+  
+/* Increased size for login button and language dropdown */
+.mobile-actions .login-button,
+.mobile-actions .language-dropdown select {
+font-size: 1rem !important;
+height: 40px !important;
+min-width: auto !important;
+width: auto !important;
+padding: 0.5rem 0.8rem !important;
+border-radius: 8px !important;
+}
+  
+.mobile-actions .language-dropdown {
+width: auto !important;
+height: 40px !important;
+margin: 0 !important;
+padding: 0 !important;
+}
+  
+/* Increased burger menu size */
+.mobile-menu-btn {
+      padding: 0 !important;
+      width: 48px !important;
+      height: 48px !important;
+    }
+  
+.mobile-actions .mobile-menu-btn svg {
+width: 48px !important;
+height: 48px !important;
+}
+  }
+  
+  /* REMOVED: Deleted a conflicting and redundant rule that was making mobile buttons extremely small. */
+  
+  @media (max-width: 480px) {
+    .mobile-actions .login-button,
+    .mobile-actions .language-dropdown select {
+      height: 38px !important;
+      font-size: 0.8rem !important;
+      padding: 0.4rem 0.7rem !important;
+    }
+    .mobile-actions .language-dropdown {
+      height: 38px !important;
+    }
+  }
+  
+  .call-sales-btn {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+background: #f3f4f6;
+border: none;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.2s;
+  }
+  
+  .call-sales-btn:hover {
+background: #e5e7eb;
+  }
+  
+  .call-label {
+font-size: 0.75rem;
+color: #6b7280;
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+  }
+  
+  .mobile-menu-overlay {
+position: fixed;
+top: 88px; /* MODIFIED: Adjusted to match new mobile header height */
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.5);
+z-index: 999;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+  }
+  
+  .mobile-menu-overlay.open {
+opacity: 1;
+visibility: visible;
+  }
+  
+  .mobile-menu {
+background: white;
+padding: 2rem;
+margin: 1rem;
+border-radius: 8px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+gap: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+.mobile-menu {
+padding: 1rem;
+margin: 0.5rem;
+border-radius: 6px;
+gap: 0.5rem;
+}
+  }
+  
+  .mobile-nav-item {
+background: none;
+border: none;
+padding: 1rem 0;
+font-size: 1.1rem;
+font-weight: 500;
+color: #374151;
+text-align: left;
+cursor: pointer;
+transition: color 0.2s;
+  }
+  
+  .mobile-nav-item:hover {
+color: #2A4992;
+text-decoration: underline;
+  }
+  
+  @media (max-width: 480px) {
+.mobile-nav-item {
+font-size: 1rem;
+padding: 0.7rem 0;
+}
+  }
+  
+  .mobile-divider {
+border: none;
+height: 1px;
+background: #e5e7eb;
+margin: 0.5rem 0;
+  }
+  
+  .mobile-demo-btn {
+background: #2A4992;
+color: white;
+border: none;
+padding: 1rem;
+font-size: 1rem;
+font-weight: 600;
+border-radius: 6px;
+cursor: pointer;
+margin-top: 0.5rem;
+transition: background-color 0.2s;
+  }
+  
+  .mobile-demo-btn:hover {
+background: #3e4658;
+  }
+  
+  @media (max-width: 480px) {
+.mobile-demo-btn {
+padding: 0.7rem;
+font-size: 0.95rem;
+border-radius: 5px;
+}
+  }
+  
+  a {
+text-decoration: none;
+  }
+  
+  a:hover {
+text-decoration: underline;
+  }
+  
+  .language-dropdown {
+display: inline-block;
+margin-left: 0.5rem;
+width: auto;
+position: relative;
+right: -20px;
+height: 40px;
+vertical-align: middle;
+  }
+  
+  .language-dropdown select {
+width: 100%;
+padding: 0.25rem 0.75rem;
+border-radius: 6px;
+border: 1.5px solid #2A4992;
+font-size: 0.9rem;
+background: none;
+color: var(--primary-color);
+transition: border 0.2s;
+height: 32px;
+min-width: 40px;
+box-sizing: border-box;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+  }
+  
+  .language-dropdown select:focus {
+border-color: #2A4992;
+outline: none;
+  }
+  
+  /* Remove previous mobile language-dropdown rules to avoid conflict */
+  @media (max-width: 768px) {
+.language-dropdown {
+display: inline-block !important;
+position: static;
+right: auto;
+vertical-align: middle;
+}
+  }
+  
+  @media (min-width: 769px) {
+.desktop-actions .login-button,
+.desktop-actions .language-dropdown select {
+font-size: 1rem;
+height: 40px;
+min-width: 88px;
+width: 88px;
+padding: 0.5rem 0.8rem;
+border-radius: 6px;
+box-sizing: border-box;
+text-align: center;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+margin: 0 8px 0 0;
+}
+.desktop-actions .language-dropdown {
+width: 88px;
+min-width: 88px;
+margin: 0 8px 0 0;
+padding: 0;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+}
+.desktop-actions .demo-button {
+font-size: 0.95rem;
+height: 40px;
+min-width: 140px;
+width: 140px;
+padding: 0.5rem 0.8rem;
+border-radius: 6px;
+box-sizing: border-box;
+text-align: center;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+margin: 0 8px 0 0;
+white-space: nowrap;
+vertical-align: middle;
+}
+  }
+ 
+  /* --- Extra Responsive Breakpoints and Improvements --- */
+  @media (max-width: 1024px) {
+.header-container {
+padding: 0 1rem;
+max-width: 95vw;
+}
+.desktop-nav {
+gap: 1.2rem;
+}
+.logo img {
+height: 32px;
+}
+  }
+ 
+  @media (max-width: 600px) {
+.header-container {
+padding: 0 0.5rem;
+}
+.mobile-container {
+padding: 0 0.5rem;
+}
+.mobile-demo-btn, .mobile-nav-item {
+font-size: 0.95rem;
+padding: 0.5rem 0;
+}
+  }
+ 
+  @media (max-width: 375px) {
+.mobile-header, .mobile-container {
+min-width: 0;
+padding: 0 0.2rem;
+}
+.mobile-demo-btn, .mobile-nav-item {
+font-size: 0.85rem;
+padding: 0.4rem 0;
+}
+  }
+ 
+  @media (max-width: 320px) {
+.mobile-header, .mobile-container {
+padding: 0 0.1rem;
+}
+.mobile-demo-btn, .mobile-nav-item {
+font-size: 0.75rem;
+padding: 0.3rem 0;
+}
+  }
+ 
+  .logo img, .header-container, .mobile-container, .mobile-demo-btn, .mobile-nav-item, .login-button, .language-dropdown select {
+box-sizing: border-box;
+max-width: 100%;
+  }
+ 
+  @media (max-width: 768px) {
+.mobile-header,
+.mobile-actions {
+display: flex !important;
+}
+.mobile-header {
+display: block !important;
+}
+.header-container {
+display: none !important;
+}
+  }
+  @media (min-width: 769px) {
+.mobile-header {
+display: none !important;
+}
+.header-container {
+display: flex !important;
+}
+  }
+ 
+  .mobile-login-btn {
+ background: #2A4992;
+ color: #fff;
+ width: 70px;
+ border-radius: 6px;
+ padding: 0.7rem 0;
+ font-size: 1.1rem;
+ font-weight: 500;
+ text-align: center;
+ cursor: pointer;
+ transition: background 0.2s, color 0.2s;
+ margin-bottom: 6px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  }
+  .mobile-login-btn:hover {
+ background: #1e3670;
+ color: #fff;
+  }
+  
+  .desktop-actions .language-dropdown {
+  margin-right: 20px;
+  }
+  .desktop-actions .login-button {
+ margin-right: 4px;
+  }
+  .desktop-actions .demo-button {
+ margin-right: 0;
+  }
+  
+  .mobile-menu-btn:hover, .mobile-menu-btn:active, .mobile-menu-btn:focus {
+    background: none !important;
+    color: inherit !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  /* desktop action style */

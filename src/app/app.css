@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'MainFont';
+    src: url('../assets/font/SF-Pro.ttf') format('truetype');
+  }
+body, html {
+    background: #fff !important;
+}
+body{
+    font-family:MainFont;
+}
+footer{
+    font-family:MainFont;
+}

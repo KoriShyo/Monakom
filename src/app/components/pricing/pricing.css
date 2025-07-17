@@ -1,0 +1,301 @@
+/* General Body Styles for a clean slate */
+body {
+    font-family: 'Inter', sans-serif; /* A modern, readable font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa; /* Light grey background for the page */
+    color: #343a40; /* Darker text for readability */
+}
+
+/* Pricing Page Background (if it's a full-page background) */
+.pricing-page-bg {
+    padding: 60px 0; /* Add vertical padding */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 60px; /* More space below header */
+}
+
+.header h1 {
+    font-size: 3em; /* Larger, more impactful heading */
+    color: #212529; /* Darker for emphasis */
+    margin-bottom: 15px;
+    font-weight: 700; /* Bolder */
+}
+
+.header p {
+    font-size: 1.15em;
+    color: #6c757d; /* Softer descriptive text */
+    max-width: 700px;
+    margin: 0 auto; /* Center align paragraph */
+    line-height: 1.6;
+}
+
+/* Pricing Grid - This is where the "3 boxes in a row" (responsive) is handled */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Pricing Card */
+.pricing-card {
+    background-color: #ffffff; /* Pure white background */
+    border-radius: 12px; /* Softer rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Subtle, modern shadow */
+    padding: 40px; /* Generous internal padding */
+    display: flex;
+    flex-direction: column;
+    min-height: 600px; /* Adjust as needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    border: 1px solid #e9ecef; /* Very light border for definition */
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px); /* Lift card on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow on hover */
+}
+
+/* Card Header */
+.card-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-title {
+    font-size: 2.2em; /* Larger title */
+    font-weight: 700;
+    color: #2A4992;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Uppercase for clear distinction */
+    letter-spacing: 1px;
+}
+
+.card-description {
+    font-size: 1em;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+/* Card Content */
+.card-content {
+    flex: 0 0 370px; /* This value should be the same for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Price Section */
+.price-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.starting-text {
+    font-size: 0.95em;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 2.8em; /* Large price text */
+    font-weight: 700;
+    color: #212529;
+    line-height: 1; /* Prevent extra space */
+}
+
+.price span {
+    font-size: 0.7em; /* For "Coming Soon" */
+    font-weight: 600;
+}
+
+/* Button Wrapper */
+.button-wrapper {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 25px; /* Space below the button */
+}
+
+.cta-buttonn {
+    background-color: #2A4992;
+    color: #fff;
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px; /* Slightly more rounded */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none; /* Remove default button border */
+    width: 100%; /* Make button full width of its container */
+    max-width: 250px; /* Max width for button */
+}
+
+.btn-primary {
+    background-color: #2A4992;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(42, 73, 146, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #1d3266;
+    color: #fff;
+}
+
+/* POS Cloud Note */
+.pos-cloud-note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.pos-cloud-annual {
+    font-weight: 600;
+    color: #28a745; /* A success green for savings */
+}
+
+/* Features Section */
+.features-section {
+    border-top: 1px solid #e9ecef; /* Light separator */
+    padding-top: 25px;
+    margin-top: 25px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start; /* Align icon and text at the top */
+    margin-bottom: 15px;
+    font-size: 1em;
+    line-height: 1.4;
+    color: #495057;
+}
+
+.feature-icon {
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    width: 24px; /* Fixed width for icons */
+    height: 24px;
+    margin-right: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Make icons circular */
+}
+
+.icon-check {
+    color: #ffffff; /* White checkmark */
+    background-color: #28a745; /* Green background for checks */
+}
+
+.icon-circle {
+    color: #6c757d; /* Grey circle */
+    border: 2px solid #ced4da;
+    font-size: 0.8em; /* Smaller circle dot */
+}
+
+.icon-info {
+    color: #ffffff;
+    background-color: #17a2b8; /* Info blue for plus signs */
+}
+
+.feature-text {
+    flex-grow: 1; /* Allow text to take remaining space */
+}
+
+/* View All Features Link */
+.view-features {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1em;
+    color: #2A4992;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.view-features:hover {
+    color: #1d3266;
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .pricing-page-bg {
+        padding: 40px 0;
+    }
+
+    .pricing-card {
+        padding: 30px;
+    }
+
+    .card-title {
+        font-size: 1.8em;
+    }
+
+    .price {
+        font-size: 2.4em;
+    }
+
+    .cta-buttonn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header p {
+        font-size: 1em;
+    }
+
+    .pricing-card {
+        padding: 25px;
+    }
+}
+
+/* Mobile: Stack cards vertically */
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 901px) {
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

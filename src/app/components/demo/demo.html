@@ -1,0 +1,137 @@
+<!-- contact-us.component.html -->
+<div class="contact-us-container">
+  <div class="contact-us-card">
+    <h1 class="title">Contact us</h1>
+    <p class="subtitle">
+      If you have a question about our app or have a technical issue, feel free
+      to fill in the form or call us at:
+      <a
+        href="https://t.me/Monakom_Sale"
+        class="social-link"
+        aria-label="Telegram"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg
+          class="social-icon"
+          viewBox="0 0 24 24"
+          style="width: 16px; height: 16px"
+        >
+          <path
+            d="M9.036 16.569l-.398 5.618c.57 0 .816-.244 1.113-.537l2.665-2.537 5.522 4.037c1.012.558 1.736.264 1.99-.937l3.611-16.964c.33-1.484-.537-2.062-1.523-1.701L2.24 9.47c-1.462.57-1.447 1.384-.25 1.751l4.617 1.441 10.726-6.77c.504-.326.965-.145.586.207z"
+          />
+        </svg>
+      </a>
+      +855 (0)89 226 322
+    </p>
+
+    <!-- Success Message -->
+    <div *ngIf="submitSuccess" class="success-message">
+      ✅ Thank you! Your message has been submitted successfully. We'll get back to you soon.
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="submitError" class="error-message">
+      ❌ Something went wrong. Please try again or contact us directly.
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <!-- First Name and Last Name -->
+      <div class="form-row">
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="First name"
+            formControlName="firstName"
+            class="form-control"
+            [class.invalid]="isFieldInvalid('firstName')"
+          />
+          <div *ngIf="isFieldInvalid('firstName')" class="field-error">
+            {{ getFieldError('firstName') }}
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Last name"
+            formControlName="lastName"
+            class="form-control"
+            [class.invalid]="isFieldInvalid('lastName')"
+          />
+          <div *ngIf="isFieldInvalid('lastName')" class="field-error">
+            {{ getFieldError('lastName') }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <input
+          type="tel"
+          placeholder="Phone"
+          formControlName="phone"
+          class="form-control"
+          [class.invalid]="isFieldInvalid('phone')"
+        />
+        <div *ngIf="isFieldInvalid('phone')" class="field-error">
+          {{ getFieldError('phone') }}
+        </div>
+      </div>
+
+      <!-- Restaurant Name -->
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="Restaurant Name"
+          formControlName="restaurantName"
+          class="form-control"
+          [class.invalid]="isFieldInvalid('restaurantName')"
+        />
+        <div *ngIf="isFieldInvalid('restaurantName')" class="field-error">
+          {{ getFieldError('restaurantName') }}
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <input
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+          class="form-control"
+          [class.invalid]="isFieldInvalid('email')"
+        />
+        <div *ngIf="isFieldInvalid('email')" class="field-error">
+          {{ getFieldError('email') }}
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <textarea
+          placeholder="Message"
+          formControlName="message"
+          class="form-control message-area"
+          rows="5"
+          [class.invalid]="isFieldInvalid('message')"
+        ></textarea>
+        <div *ngIf="isFieldInvalid('message')" class="field-error">
+          {{ getFieldError('message') }}
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="button-container">
+        <button
+          type="submit"
+          class="submit-btn"
+          [disabled]="contactForm.invalid || loading"
+          [class.loading]="loading"
+        >
+          <span *ngIf="loading" class="loading-spinner"></span>
+          {{ loading ? 'Sending...' : 'Submit' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

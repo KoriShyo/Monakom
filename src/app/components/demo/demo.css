@@ -1,0 +1,183 @@
+/* Global box-sizing fix */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.contact-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.contact-us-card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #2A4992;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Form row layout */
+.form-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+/* Full-width form-group by default */
+.form-group {
+  flex: 1 1 100%;
+  margin-bottom: 1rem; /* uniform spacing */
+}
+
+.form-row .form-group {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    gap: 8px;
+  }
+  .form-row .form-group {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 150px;
+  }
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #111827;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #2A4992;
+  box-shadow: 0 0 0 3px rgba(8, 16, 75, 0.2);
+}
+
+.message-area {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Keep same spacing above submit button */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* same spacing as inputs */
+}
+
+.submit-btn {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2A4992;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #2A4992;
+  transform: translateY(-1px);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  background-color: #2A4992;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #2A4992;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.telegram-animate .social-icon {
+  transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+  will-change: transform;
+}
+
+.telegram-animate:hover .social-icon,
+.telegram-animate:focus .social-icon {
+  transform: scale(1.4) rotate(-10deg);
+  box-shadow: 0 4px 16px rgba(42, 73, 146, 0.2);
+}
+
+.telegram-animate {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.telegram-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #2A4992;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(42, 73, 146, 0.08);
+}
+
+.telegram-animate:hover .telegram-frame,
+.telegram-animate:focus .telegram-frame {
+  background: #2A4992;
+  border-color: #2A4992;
+  box-shadow: 0 4px 16px rgba(42, 73, 146, 0.18);
+}
+
+.telegram-animate .social-icon {
+  fill: #2A4992;
+  transition: fill 0.2s, transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+  will-change: transform;
+}
+
+.telegram-animate:hover .social-icon,
+.telegram-animate:focus .social-icon {
+  fill: #fff;
+  transform: scale(1.4) rotate(-10deg);
+  box-shadow: 0 4px 16px rgba(42, 73, 146, 0.2);
+}

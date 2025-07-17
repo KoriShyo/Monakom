@@ -1,0 +1,347 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-title {
+    font-size: 64px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #2A4992 0%, #1e3570 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.magic-subtitle {
+    font-size: 18px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 100px;
+    align-items: start;
+}
+
+.content-left h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 24px;
+}
+
+.content-left p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #2A4992 0%, #1e3570 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(42, 73, 146, 0.3);
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(42, 73, 146, 0.4);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #2A4992 0%, #1e3570 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.feature-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.feature-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.brand-identity {
+    margin-bottom: 80px;
+}
+
+.brand-identity h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.identity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.identity-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.identity-card:hover {
+    transform: translateY(-5px);
+}
+
+.identity-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #2A4992 0%, #1e3570 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.identity-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.identity-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.company-evolution {
+    text-align: center;
+}
+
+.evolution-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.evolution-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #2A4992 0%, #1e3570 100%);
+    z-index: 1;
+}
+
+.timeline-item {
+    background: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(42, 73, 146, 0.2);
+    border: 3px solid #2A4992;
+}
+
+.timeline-item .icon {
+    font-size: 24px;
+    color: #2A4992;
+}
+
+.timeline-label {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c3e50;
+    white-space: nowrap;
+}
+
+.logo-section {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 60px;
+    text-align: center;
+}
+
+.logo-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.logo-section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.logo-visual {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #2A4992 0%, #1e3570 100%);
+    border-radius: 20px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.network-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.network-dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+}
+
+.network-dot:nth-child(1) { top: 20%; left: 20%; }
+.network-dot:nth-child(2) { top: 20%; right: 20%; }
+.network-dot:nth-child(3) { bottom: 20%; left: 20%; }
+.network-dot:nth-child(4) { bottom: 20%; right: 20%; }
+.network-dot:nth-child(5) { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.network-line {
+    position: absolute;
+    height: 1px;
+    background: white;
+    opacity: 0.5;
+}
+
+.monakom-text {
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 48px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .identity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-label {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .about-container {
+        padding: 10px 4px;
+    }
+
+    .about-header {
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}

@@ -1,0 +1,142 @@
+<header class="header">
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="download.jpg" alt="">
+      </div>
+  
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <div class="nav-item dropdown">
+          <a href="#hero">
+            <button class="nav-button" (click)="onNavClick('restaurants')">
+              Home
+              <!-- <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg> -->
+            </button>
+          </a>
+          
+        </div>
+  
+        <div class="nav-item dropdown">
+          <a href="#pricing">
+            <button class="nav-button" (click)="onNavClick('retail')">
+              Pricing
+              <!-- <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg> -->
+            </button>
+          </a>
+         
+        </div>
+  
+        <div class="nav-item dropdown">
+          <a href="#feature">
+            <button class="nav-button" (click)="onNavClick('products')">
+              Feature
+              <!-- <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg> -->
+            </button>
+          </a>
+          
+        </div>
+  
+        <div class="nav-item">
+          <a href="#about">
+            <button class="nav-button" (click)="onNavClick('pricing')">
+              About
+            </button>
+          </a>
+        
+        </div>
+  
+        <div class="nav-item dropdown">
+          <a href="#demo">
+            <button class="nav-button" (click)="onNavClick('resources')">
+              Contact
+              <!-- <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg> -->
+            </button>
+          </a>
+        
+        </div>
+        
+      </nav>
+  
+      <!-- Desktop Right Side -->
+      <div class="desktop-actions">
+        <div class="language-dropdown">
+          <select aria-label="Change language" (change)="onLanguageChange($event)">
+            <option value="en" selected>EN</option>
+            <option value="fr">KH</option>
+            <option value="ch">CH</option>
+          </select>
+        </div>
+        <a href="https://www.monakom.com/#/login">
+          <button class="login-button" (click)="onLogin()">Login</button>
+        </a>
+        <a href="#demo">
+          <button class="demo-button" (click)="onGetDemo()">CONTACT US</button>
+        </a>
+      </div>
+  
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" (click)="toggleMenu()">
+        <svg width="32" height="32" viewBox="0 0 32 32">
+          <path d="M3 16h26M3 8h26M3 24h26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Header (Second Image) -->
+    <div class="mobile-header">
+      <div class="mobile-container">
+        <div class="logo">
+          <img src="download.jpg" alt="">
+        </div>
+        <div class="mobile-actions">
+          <div class="language-dropdown mobile-language-dropdown">
+            <select aria-label="Change language" (change)="onLanguageChange($event)">
+              <option value="en" selected>EN</option>
+              <option value="fr">KH</option>
+              <option value="ch">CH</option>
+            </select>
+          </div>
+          <button class="mobile-menu-btn" (click)="toggleMenu()">
+            <svg width="32" height="32" viewBox="0 0 32 32">
+              <path d="M3 16h26M3 8h26M3 24h26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="toggleMenu()">
+      <div class="mobile-menu" (click)="$event.stopPropagation()">
+        <a href="#hero" (click)="toggleMenu()">
+          <button class="mobile-nav-item" (click)="onNavClick('home')">Home</button>
+        </a>
+        <a href="#pricing" (click)="toggleMenu()">
+          <button class="mobile-nav-item" (click)="onNavClick('pricing')">Pricing</button>
+        </a>
+        <a href="#feature" (click)="toggleMenu()">
+          <button class="mobile-nav-item" (click)="onNavClick('feature')">Features</button>
+        </a>
+        <a href="#about" (click)="toggleMenu()">
+          <button class="mobile-nav-item" (click)="onNavClick('about')">About</button>
+        </a>
+        <a href="#demo" (click)="toggleMenu()">
+          <button class="mobile-nav-item" (click)="onNavClick('demo')">Contact</button>
+        </a>
+        <hr class="mobile-divider">
+        <a href="https://www.monakom.com/#/login" (click)="toggleMenu()">
+          <button class="mobile-nav-item mobile-login-btn" (click)="onLogin()"><span class="login-label">Login</span></button>
+        </a>
+        <button class="mobile-demo-btn" (click)="onGetDemo(); toggleMenu()">Contact Monakom</button>
+      </div>
+    </div>
+  </header>

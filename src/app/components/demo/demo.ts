@@ -23,7 +23,7 @@ export class ContactUsComponent implements OnInit {
   submitError = false;
   errorMessage = '';
 
-  webhookUrl: string = 'https://script.google.com/macros/s/AKfycbxRdjQEcdIRnm9fNtwOLycehC5c_TOpP8gdyqSPtfxW/exec';
+  webhookUrl: string = 'https://script.google.com/macros/s/AKfycbwNSBjDhImy-wsvhyqok3N95MqP0yhObme8dhUW1qzKy9OFXl-KrkZcjtfSQvLDp7WM/exec';
 
   constructor(private fb: FormBuilder, private http: HttpClient) {}
 

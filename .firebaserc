@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "monakom-acf58"
-  }
+    "default": "monakomtech"
+  },
+  "targets": {},
+  "etags": {}
 }
